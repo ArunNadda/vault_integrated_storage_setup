@@ -1,5 +1,10 @@
 ## Repo to setup vault using integrated storage with vagrant
 
+### This repo uses [HashiCorp vault enterprise binary] to setup HA cluster. Vault license should be installed to HA clusters. It can be obtained from https://www.vaultproject.io/docs/enterprise/license. A trial license can be downloaded from https://www.hashicorp.com/products/vault/trial. 
+
+- Guide to install HashiCorp Enterprise License - https://learn.hashicorp.com/tutorials/nomad/hashicorp-enterprise-license?in=vault/enterprise
+- https://support.hashicorp.com/hc/en-us/articles/4403072322707-How-to-install-license-in-Vault-DR-cluster-in-vault-running-1-7-x-version-and-prior
+
 
 #### Documentation
 
