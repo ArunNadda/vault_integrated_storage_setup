@@ -33,7 +33,7 @@ total 164384
 -rw-r--r--  1 anadda  staff       116  6 Sep 09:20 readme.md
 -rw-r--r--  1 anadda  staff  74100420 27 Aug 08:56 vault_1.7.4+ent_linux_amd64.zip
 ```
-- start vault VM nodes using vagrant, this command setup two vault clusters - 1 3node cluster and 1 2node cluster.
+- start vault VM nodes using vagrant, this command setup two vault clusters - a 3node cluster and a 2node cluster.
 
 ```
 vagrant up
