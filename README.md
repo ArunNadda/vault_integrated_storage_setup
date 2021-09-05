@@ -14,39 +14,34 @@
 
 #### quick setup
 
+-  clone repo
+
 ```
-# clone repo
 git clone https://github.com/ArunNadda/vault_integrated_storage_setup.git
 cd vault_integrated_storage_setup
+```
+- download vault ent binary (below steps to download 1.7.4+ent)
 
-# download vault ent binary (below steps to download 1.7.4+ent)
-
+```
 vault_integrated_storage_setup % cd ent
 ent % ls
 readme.md
-ent % wget https://releases.hashicorp.com/vault/1.7.4+ent/vault_1.7.4+ent_linux_amd64.zip
---2021-09-06 09:23:53--  https://releases.hashicorp.com/vault/1.7.4+ent/vault_1.7.4+ent_linux_amd64.zip
-Resolving releases.hashicorp.com (releases.hashicorp.com)... 2a04:4e42:13::439, 151.101.81.183
-Connecting to releases.hashicorp.com (releases.hashicorp.com)|2a04:4e42:13::439|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 74100420 (71M) [application/zip]
-Saving to: ‘vault_1.7.4+ent_linux_amd64.zip’
 
-vault_1.7.4+ent_linux_am 100%[=================================>]  70.67M  20.5MB/s    in 3.7s
-
-2021-09-06 09:23:57 (18.9 MB/s) - ‘vault_1.7.4+ent_linux_amd64.zip’ saved [74100420/74100420]
-
+ent % wget -q https://releases.hashicorp.com/vault/1.7.4+ent/vault_1.7.4+ent_linux_amd64.zip
 % ls -l
 total 164384
 -rw-r--r--  1 anadda  staff       116  6 Sep 09:20 readme.md
 -rw-r--r--  1 anadda  staff  74100420 27 Aug 08:56 vault_1.7.4+ent_linux_amd64.zip
+```
+- start vault VM nodes using vagrant, this command setup two vault clusters - 1 3node cluster and 1 2node cluster.
 
-# start vault VM nodes using vagrant
-
+```
 vagrant up
 
-# this setup two vault clusters - 1 3node cluster and 1 2node cluster.
+# check status 
+vagrant status
 ```
+
 
 #### Usage/Examples
 
