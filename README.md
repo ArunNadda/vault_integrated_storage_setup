@@ -36,6 +36,7 @@ total 164384
 - start vault VM nodes using vagrant, this command setup two vault clusters - a 3node cluster and a 2node cluster.
 
 ```
+cd ..
 vagrant up
 
 # check status 
