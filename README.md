@@ -50,7 +50,7 @@ vagrant up
 
 #### Usage/Examples
 
-1. setup 3 node vault HA cluster
+1. Setup 3 node vault HA cluster
 
 - to setup vault cluster in HA mode (3 nodes)
 
@@ -80,31 +80,31 @@ cd vault_integrated_storage_setup
 vagrant up vaults0 vaults1 vaults2
 ```
 
-above command will bring up vaults0 first and then join vaults1, vaults2 to cluster. vault root token and recovery keys are on `vaults0` node, to get these keys/token
+- Above command will bring up vaults0 first and then join vaults1, vaults2 to cluster. vault root token and recovery keys are on `vaults0` node, to get these keys/token
 
 ```
 vagrant ssh vautls0
 
 cat /var/intvault/rec.key
 ```
-Access vault from inside the node
+- Access vault from inside the node
 
 ```
 export VAULT_ADDR=https://127.0.0.1:8200 (set in vagrant user env)
 vault login `grep Token /var/intvault/rec.key | awk -F':' '{print $NF}'`
 ```
-Access vault from  laptop (outside of the vault nodes)
+- Access vault from  laptop (outside of the vault nodes)
 
 ```
 export VAULT_ADDR=https://10.10.42.200:8200
 vault status
 ```
-check raft peers
+- check raft peers
 
 ```
 vault operator raft list-peers
 ```
-vault config file (from inside vault node)
+- vault config file (from inside vault node)
 
 ```
 cat /etc/vault/vault.hcl
@@ -113,7 +113,7 @@ cat /etc/vault/vault.hcl
 
 
 
-- to setup 2nd vault cluster (for secondaryi (DR/PerfSec) cluster), below command will bring up, initialized `vaults3` node and then `vaults4` will join it to bring 2 node cluster.
+2. To setup 2nd vault cluster (for secondaryi (DR/PerfSec) cluster), below command will bring up, initialized `vaults3` node and then `vaults4` will join it to bring 2 node cluster.
 
 ```
 vagrant up vaults3 vaults4
